@@ -102,7 +102,7 @@
 
       <!-- Main Nav -->
       <nav class="navbar">
-        <div class="container navbar-content">
+        <div class="container-fluid navbar-content">
           <div class="nav-menu" id="nav-menu">
             <ul class="nav-links">
               <li class="nav-item"><a href="/" class="active">HOME</a></li>
@@ -173,17 +173,31 @@
               <h3 class="mirror-form-title">CONTACT US NOW!</h3>
               <form class="hero-form">
                 <div class="form-group">
-                  <input type="text" placeholder="Name" />
+                  <label for="form-name">Name *</label>
+                  <input type="text" id="form-name" placeholder="Name" />
                 </div>
                 <div class="form-group">
-                  <input type="email" placeholder="Email" />
-                </div>
-                <div class="form-group phone-group">
-                  <span class="country-code">+1</span>
-                  <input type="tel" placeholder="Phone Number" />
+                  <label for="form-email">Email *</label>
+                  <input type="email" id="form-email" placeholder="Email" />
                 </div>
                 <div class="form-group">
-                  <textarea placeholder="Message" rows="3"></textarea>
+                  <label for="form-phone">Phone Number *</label>
+                  <div class="phone-input-wrapper">
+                    <span class="country-code">+1</span>
+                    <input
+                      type="tel"
+                      id="form-phone"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="form-message">Message *</label>
+                  <textarea
+                    id="form-message"
+                    placeholder="Message"
+                    rows="3"
+                  ></textarea>
                 </div>
                 <div class="privacy-note">100% PRIVACY - WE NEVER SPAM YOU</div>
                 <button type="submit" class="btn-mirror-send">Send</button>
@@ -297,11 +311,11 @@
           <div class="hvac-services-col-images">
             <div class="hvac-image-composition">
               <div class="hvac-dot-grid"></div>
-              <!-- <img
+              <img
                 src="assets/images/expert-repairman.png"
                 alt="HVAC Expert Back"
                 class="hvac-img-back"
-              /> -->
+              />
               <img
                 src="assets/images/trusted-name.png"
                 alt="HVAC Expert Front"
@@ -983,23 +997,6 @@
           <span>Need An Electrician?</span>
           <a href="tel:7603927616" class="sticky-phone">(760) 392-7616</a>
         </div>
-        <form class="sticky-form">
-          <input type="text" placeholder="Your Name" />
-          <div class="sticky-phone-input">
-            <span class="prefix">+1</span>
-            <input type="tel" placeholder="Phone Number" />
-          </div>
-          <input type="email" placeholder="Email" />
-          <select>
-            <option>Select Service</option>
-            <option>Plumbing</option>
-            <option>Heating</option>
-            <option>Air Conditioning</option>
-          </select>
-          <input type="text" placeholder="mm/dd/yyyy" />
-          <input type="text" placeholder="Message" />
-          <button type="submit" class="btn-sticky-send">Send</button>
-        </form>
       </div>
     </div>
 
