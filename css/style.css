@@ -535,6 +535,52 @@ body {
     z-index: 3;
 }
 
+/* Certified Experts Section */
+.certified-experts-section {
+    padding: 50px 0;
+    background-color: #FFFFFF;
+}
+
+.experts-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2D2D2D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.experts-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.experts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.experts-list li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #2D2D2D;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.expert-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
 /* Service Cards Section Mirroring */
 .service-cards-section {
     margin-top: 40px;
@@ -644,7 +690,230 @@ body {
     margin: 0;
 }
 
+/* Latest Blogs Section */
+.latest-blogs-section {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.blogs-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2D2D2D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1E375C;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.blog-post-desc {
+    font-size: 14px;
+    color: #6E6E6E;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.blog-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #319A52;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.blog-link:hover {
+    color: #287a41;
+}
+
+@media (max-width: 992px) {
+    .blogs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blogs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FAQs Section */
+.faqs-section {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.faqs-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2D2D2D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faqs-accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 1px solid #EAEAEA;
+}
+
+.faq-item {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2D2D2D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 400;
+    color: #319A52;
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+    line-height: 1;
+    display: inline-block;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6E6E6E;
+    padding: 0 0 24px 35px;
+    margin: 0;
+}
+
 /* Old classes removed for Mirror Rebuild */
+
+/* Location Section */
+.location-section {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-content {
+    flex: 0 0 350px;
+}
+
+.location-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 30px;
+}
+
+.location-item {
+    margin-bottom: 25px;
+}
+
+.loc-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 8px;
+}
+
+.loc-address {
+    font-size: 15px;
+    color: #6E6E6E;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.location-map-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-map-img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    object-fit: contain;
+}
+
+@media (max-width: 992px) {
+    .location-row {
+        flex-direction: column;
+    }
+
+    .location-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 
 /* Bottom Sticky Bar */
 .bottom-sticky-bar {
@@ -890,6 +1159,21 @@ body {
 
     .hvac-text-content p {
         text-align: center;
+    }
+
+    /* Certified Experts Mobile */
+    .certified-experts-section {
+        padding: 40px 0;
+    }
+
+    .experts-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .experts-grid {
+        flex-direction: column;
+        gap: 20px;
     }
 
     /* Service Cards Mobile */

@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const timeEl = document.getElementById("current-time");
 
   // Mobile Menu Toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
       navMenu.classList.toggle("active");
@@ -38,4 +41,34 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateDayTime, 60000);
 
   console.log("EZ Plumbing header initialized");
+
+  // FAQ Accordion Logic
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // Close all other items
+      faqItems.forEach((otherItem) => {
+        otherItem.classList.remove("active");
+        const otherIconImg = otherItem.querySelector(".faq-icon img");
+        if (otherIconImg) {
+          otherIconImg.src = "assets/images/pluse.png";
+          otherIconImg.alt = "+";
+        }
+      });
+
+      // Toggle current
+      if (!isActive) {
+        item.classList.add("active");
+        const iconImg = item.querySelector(".faq-icon img");
+        if (iconImg) {
+          iconImg.src = "assets/images/less.png";
+          iconImg.alt = "-";
+        }
+      }
+    });
+  });
 });
