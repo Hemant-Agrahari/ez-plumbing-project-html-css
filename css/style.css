@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
 /* Base Styles */
 :root {
@@ -15,6 +16,7 @@
 
     /* Typography */
     --font-primary: 'Inter', sans-serif;
+    --font-accent: 'Outfit', sans-serif;
 }
 
 * {
@@ -177,6 +179,771 @@ body {
     font-size: 12px;
 }
 
+/* --- Mirror Rebuild Styles --- */
+.hero-section {
+    position: relative;
+    background: linear-gradient(90deg, #E6F4EA 0%, #E6F4EA 50%, #31A05B 50%, #31A05B 100%);
+    height: 705px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.mirror-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+}
+
+.hero-mirror-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 60px;
+    height: 100%;
+    position: relative;
+}
+
+.hero-mirror-col-left {
+    flex: 0 0 500px;
+}
+
+.hero-mirror-col-right {
+    flex: 0 0 412px;
+}
+
+/* Typography Mirroring */
+.hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #2D2D2D;
+    font-weight: 700;
+    margin: 0 0 8px;
+    width: 500px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #2D2D2D;
+    font-weight: 500;
+    margin: 16px 0;
+}
+
+.hero-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    color: #6E6E6E;
+    margin: 0 0 16px;
+    max-width: 500px;
+}
+
+/* CTA Box Mirroring */
+.hero-cta-box {
+    background-color: #31A05B;
+    width: 612px;
+    height: 180px;
+    padding: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 60px;
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 25;
+}
+
+.cta-label {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.cta-phone {
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.cta-accent-bar {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 612px;
+    height: 4px;
+    background-color: #FFF;
+}
+
+/* Form Card Mirroring */
+.mirror-form-card {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 8px;
+    width: 412px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.mirror-form-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2D2D2D;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hero-form .form-group {
+    margin-bottom: 16px;
+}
+
+.hero-form input,
+.hero-form textarea {
+    width: 100%;
+    height: 45px;
+    padding: 10px 17px;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+    background: #FFF;
+}
+
+.hero-form textarea {
+    height: auto;
+}
+
+.btn-mirror-send {
+    width: 100%;
+    padding: 15px;
+    background-color: #319A52;
+    color: #FFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Technician Image Mirroring */
+.hero-technician-overlay {
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    z-index: 15;
+    pointer-events: none;
+}
+
+.mirror-technician-img {
+    height: 705px;
+    width: auto;
+    display: block;
+}
+
+/* Floating Tab Mirroring */
+.mirror-floating-tab {
+    position: absolute;
+    right: 0;
+    top: 282px;
+    width: 32px;
+    background-color: #000;
+    color: #FFF;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-icon-red {
+    background-color: #FF0000;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-text-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Solutions Section Mirroring */
+.solutions-section {
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+.solutions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.solutions-col-image {
+    flex: 0 0 794px;
+}
+
+.solutions-col-text {
+    flex: 0 0 710px;
+}
+
+.solutions-img {
+    width: 100%;
+    height: 634px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.solutions-title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 24px;
+}
+
+.solutions-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6E6E6E;
+    margin-bottom: 16px;
+}
+
+.solutions-content strong {
+    color: #2D2D2D;
+    font-weight: 600;
+}
+
+.btn-mirror-learn {
+    display: inline-block;
+    width: 203px;
+    height: 60px;
+    background-color: #319A52;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-mirror-learn:hover {
+    background-color: #287a41;
+    color: #FFFFFF;
+}
+
+/* HVAC Services Section Mirroring */
+.hvac-services-section {
+    margin-top: 60px;
+    padding: 60px 0;
+}
+
+.hvac-services-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hvac-services-col-text {
+    flex: 0 0 700px;
+}
+
+.hvac-subtitle-main {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 24px;
+}
+
+.hvac-subheading {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #2D2D2D;
+    margin-bottom: 24px;
+}
+
+.hvac-text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2D2D2D;
+    margin-bottom: 16px;
+}
+
+.hvac-services-col-images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hvac-image-composition {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 700px;
+    /* Base height for desktop */
+}
+
+.hvac-dot-grid {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 156px;
+    height: 156px;
+    background-image: radial-gradient(#d1d1d1 2px, transparent 2px);
+    background-size: 16px 16px;
+    z-index: 1;
+}
+
+.hvac-img-back {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 560px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.hvac-img-front {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 591px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+}
+
+/* Service Cards Section Mirroring */
+.service-cards-section {
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+.large-container {
+    max-width: 1800px;
+    padding: 0 60px;
+}
+
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #FBFBFB;
+    background-image: radial-gradient(circle at 50% 50%, rgba(49, 160, 91, 0.1) 0%, transparent 70%);
+    border-radius: 30px;
+    padding: 35px;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 12px;
+}
+
+.service-card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6E6E6E;
+    margin: 0;
+}
+
+.service-card-text strong {
+    color: #2D2D2D;
+    font-weight: 600;
+}
+
+.service-card-text strong {
+    color: #2D2D2D;
+    font-weight: 600;
+}
+
+/* Promo Cards Section Mirroring */
+.promo-cards-section {
+    background-color: #E6F4EA;
+    padding: 80px 0;
+}
+
+.promo-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.promo-card {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.promo-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.promo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.promo-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2D2D2D;
+    margin-bottom: 4px;
+    line-height: 1;
+}
+
+.promo-subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin-bottom: 15px;
+}
+
+.promo-text {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #6E6E6E;
+    margin: 0;
+}
+
+/* Old classes removed for Mirror Rebuild */
+
+/* Bottom Sticky Bar */
+.bottom-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #049219;
+    color: var(--white);
+    padding: 8px 0;
+    z-index: 2000;
+    height: 60px;
+}
+
+.sticky-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.sticky-text {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.sticky-text span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sticky-phone {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.sticky-form {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.sticky-form input,
+.sticky-form select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 13px;
+    flex: 1;
+}
+
+.sticky-phone-input {
+    display: flex;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    flex: 1.2;
+}
+
+.sticky-phone-input .prefix {
+    background: #eee;
+    color: #333;
+    padding: 8px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-sticky-send {
+    background-color: #319A52;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments for Mirror Rebuild */
+@media (max-width: 1200px) {
+    .mirror-technician-img {
+        height: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        height: auto;
+        padding: 40px 0;
+        background: radial-gradient(at center top, #E6F4EA, #31A05B);
+    }
+
+    .mirror-container {
+        padding: 0 20px;
+    }
+
+    .hero-mirror-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .hero-mirror-col-left,
+    .hero-mirror-col-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-title {
+        width: 100%;
+        font-size: 24px;
+        margin: 0 auto 15px;
+    }
+
+    .hero-subtitle {
+        margin: 10px 0;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .hero-cta-box {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 552px;
+        margin: 20px auto;
+        clip-path: none;
+        padding: 15px;
+    }
+
+    .cta-accent-bar {
+        display: none;
+    }
+
+    .cta-label {
+        font-size: 20px;
+    }
+
+    .cta-phone {
+        font-size: 30px;
+    }
+
+    .hero-technician-overlay {
+        position: relative;
+        left: 0;
+        transform: none;
+        order: 2;
+        margin: 20px 0;
+    }
+
+    .mirror-technician-img {
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .hero-mirror-col-right {
+        order: 3;
+    }
+
+    .mirror-form-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .mirror-floating-tab {
+        display: none;
+    }
+
+    /* Solutions Section Mobile */
+    .solutions-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .solutions-col-image,
+    .solutions-col-text {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .solutions-img {
+        height: auto;
+        max-height: 400px;
+    }
+
+    .solutions-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .solutions-content p {
+        text-align: center;
+    }
+
+    .btn-mirror-learn {
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    /* HVAC Services Mobile */
+    .hvac-services-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hvac-services-col-text {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .hvac-image-composition {
+        height: 550px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hvac-img-back {
+        width: 70%;
+    }
+
+    .hvac-img-front {
+        width: 75%;
+        top: 100px;
+    }
+
+    .hvac-subtitle-main {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hvac-subheading {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .hvac-text-content p {
+        text-align: center;
+    }
+
+    /* Service Cards Mobile */
+    .service-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .large-container {
+        padding: 0 20px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    /* Promo Cards Mobile */
+    .promo-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .promo-card {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .promo-title {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .service-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .promo-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-technician-overlay {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
 /* Fixed Vertical Tab */
 .book-now-tab {
     position: fixed;
@@ -206,88 +973,5 @@ body {
     text-orientation: mixed;
     transform: rotate(180deg);
     padding: 20px 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 15px;
-}
-
-/* Mobile Menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-dark);
-    transition: 0.3s;
-}
-
-@media (max-width: 992px) {
-    .container-fluid {
-        padding: 0 15px;
-    }
-
-    .top-bar-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .header-left,
-    .header-center,
-    .header-right {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .header-right {
-        display: none;
-        /* Hide location grid on mobile like ref site? Optional */
-    }
-
-    .status-msg,
-    .toll-free {
-        font-size: 16px !important;
-    }
-
-    .navbar-content {
-        justify-content: flex-end;
-        padding: 10px 15px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-menu.active {
-        display: block;
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-item {
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        width: 100%;
-        padding: 15px;
-    }
+    font-weight: 600;
 }
